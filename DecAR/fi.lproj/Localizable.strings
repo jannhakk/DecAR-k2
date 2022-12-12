@@ -46,10 +46,31 @@
 "Main" = "Pää";
 
 // Instructions.
-"Sections" = "Nämä ohjeet ovat jaoteltu eri osiin:\n1. Yhteenveto\n2. VR Näkymä\n3. Huonekalu Näkymä\n4. Kartta\n5. Listaukset\n6. Sää Näkymä";
-"Section1" = "Osa 1: Yhteenveto\nSovelluksen käynnistyessä löydät itsesi DecAR:in VR näkymästä missä voit asetella huonekaluja ympäri huonetta. Pääset sovelluksen käyttöohjeisiin täppäämällä kysymysmerkki ikonia ruudun oikeasta ylänurkasta VR näkymässä. Vasemmasta ylänurkasta löydät ikonin joka avaa navigaatio valikon mistä pääset kulkemaan ympäri DecAR sovellusta.";
-"Section2" = "Osa 2: VR Näkymä\nVR näkymässä voit valita eri huonekaluja huoneeseen täppäämällä isoa plus nappulaa. Kun olet valinnut tietyn huonekalun ja asettanut sen haluamaasi paikkaan, voit asettaa sen paikalleen täppäämällä kerran ruutua. Jos painat ruudusta muutaman sekunnin ajan valitsemasi huonekalu poistuu näkymästä. Tekemällä ympyräliikkeen kahdella sormella tallennat huonekalujen paikat sovellukseen. Täppäämällä ruutua kahdella sormella lataat tallennetun huonekalu asettelun.";
-"Section3" = "Osa 3: Huonekalu Näkymä\nMenemällä huonekalunäkymään valikon kautta, voit lisätä, muokata tai poistaa huonekaluja sovelluksesta.";
-"Section4" = "Osa 4: Kartta\nDecAR:in karttanäkymässä näet kaikki listaukset kartalla.";
-"Section5" = "Osa 5: Listaukset Lista\nListaukset listassa pääset lisäämään, muokkaamaan ja poistamaan listauksia. HUOM! Lisää osoite listaukseen muodossa 'Osoite, Maakunta', jotta listaus näkyy kartalla.";
-"Section6" = "Osa 6: Sää Näkymä\nSää näkymässä pystyt hakemaan listauksen ympärillä olevan sään hakemalla kaupungin perusteella jossa seuraava listaus on.";
+"Sections" = "Nämä ohjeet ovat jaoteltu eri osiin:\n";
+"SectionsBolded" = "1. Yhteenveto\n2. AR Näkymä\n3. Huonekalu Näkymä\n4. Kartta\n5. Listaukset\n6. Sää Näkymä";
+
+"Section1Bolded" = "Osa 1: Yhteenveto";
+"Section1" = "\nSovelluksen käynnistyessä löydät itsesi DecAR:in AR näkymästä missä voit asetella huonekaluja ympäri huonetta. Pääset sovelluksen käyttöohjeisiin täppäämällä kysymysmerkki ikonia ruudun oikeasta ylänurkasta AR näkymässä. Vasemmasta ylänurkasta löydät ikonin joka avaa navigaatio valikon mistä pääset kulkemaan ympäri DecAR sovellusta.";
+
+"Section2BoldedPart1" = "Osa 2: AR Näkymä";
+"Section2Part1" = "\nAR näkymässä voit valita eri huonekaluja huoneeseen täppäämällä isoa plus nappulaa.\n\n";
+"Section2BoldedPart2" = "AR näkymän komennot:";
+"Section2Part2" = "\nVoit asettaa valitun huonekalun paikalle kerran täppäämällä ruutua.\n
+Painamalla ruutua muutaman sekunnin ajan valitsemasi huonekalu poistuu näkymästä.\n
+Tekemällä ympyräliikkeen kahdella sormella tallennat huonekalujen paikat sovellukseen.\n
+Täppäämällä ruutua kahdella sormella lataat tallennetun huonekaluasettelun.";
+
+"Section3Bolded" = "Osa 3: Huonekalu Näkymä";
+"Section3" = "\nMenemällä huonekalunäkymään valikon kautta, voit lisätä, muokata tai poistaa huonekaluja sovelluksesta.";
+
+"Section4Bolded" = "Osa 4: Kartta";
+"Section4" = "\nDecAR:in karttanäkymässä näet kaikki listaukset kartalla.";
+
+"Section5BoldedPart1" = "Osa 5: Listaukset Lista";
+"Section5Part1" = "\nListaukset listassa pääset lisäämään, muokkaamaan ja poistamaan listauksia. ";
+"Section5BoldedPart2" = "HUOM! ";
+"Section5Part2" = "Lisää osoite listaukseen muodossa ";
+"Section5Italics" = "'Osoite, Maakunta', jotta listaus näkyy kartalla.";
+
+"Section6Bolded" = "Osa 6: Sää Näkymä";
+"Section6" = "\nSää näkymässä pystyt hakemaan listauksen ympärillä olevan sään hakemalla kaupungin perusteella jossa seuraava listaus on.";
