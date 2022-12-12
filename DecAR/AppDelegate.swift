@@ -19,7 +19,8 @@ struct DecARCoreDataApp: App {
         createBaseFurnitures()
 
     }
-
+    
+    //If Applaunched key is not saved in UserDefaults, saves default pieces of furniture to coredata on init
     func createBaseFurnitures() {
         if UserDefaults.standard.object(forKey: "AppLaunched") == nil {
             

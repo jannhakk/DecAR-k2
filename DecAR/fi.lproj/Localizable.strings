@@ -30,7 +30,7 @@
 "furniture3DModel" = "3D mallin nimi";
 "mapNoName" = "Ei nimeä";
 "mapTapped" = "Napautettu: ";
-"weatherSearch" = "Hae";
+"weatherSearch" = "Hae kaupungin sää";
 "weatherFetchJoke" = "Hae vitsi";
 "menuWeather" = "Sää";
 "menuLabel" = "Valikko";
@@ -41,7 +41,7 @@
 "Temperature" = "Asteet";
 "feelsLike" = "Tuntuu: ";
 "Humidity" = "Kosteus: ";
-"windSpeed" = "Ilman nopeus: ";
+"windSpeed" = "Tuulen nopeus: ";
 "Description" = "Kuvaus: ";
 "Main" = "Pää";
 

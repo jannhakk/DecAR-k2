@@ -107,5 +107,4 @@ struct FurnitureMenu: View {
         .listStyle(.sidebar)
         .edgesIgnoringSafeArea(.all)
     }
-
 }

@@ -21,11 +21,7 @@ let furnitureCategory = NSLocalizedString("furnitureCategory", comment: "furnitu
 let furnitureFurnitureCategory = NSLocalizedString("furnitureFurnitureCategory", comment: "furnitureFurnitureCategory")
 let furniture3DModel = NSLocalizedString("furniture3DModel", comment: "furniture3DModel")
 
-
-
-
-
-
+//Creates a furniture collection view in which user can add, delete and check details of their pieces of furniture
 struct FurnitureCollectionView: View {
     @State private var presentAlert = false
     @State private var furnitureName: String = ""

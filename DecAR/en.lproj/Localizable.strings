@@ -30,7 +30,7 @@
 "furniture3DModel" = "3D model name";
 "mapNoName" = "No name";
 "mapTapped" = "Tapped on: ";
-"weatherSearch" = "Search";
+"weatherSearch" = "Search weather for a city";
 "weatherFetchJoke" = "Fetch joke";
 "menuWeather" = "Weather";
 "menuLabel" = "Menu";

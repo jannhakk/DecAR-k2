@@ -19,6 +19,7 @@ let listingsBtnCancel = NSLocalizedString("listingsBtnCancel", comment: "listing
 let listingsDetails = NSLocalizedString("listingsDetails", comment: "listingsDetails")
 let listingsSelectItem = NSLocalizedString("listingsSelectItem", comment: "listingsSelectItem")
 
+//Creates a listing view in which user can add, delete and check details of their clients
 struct ListingsView: View {
     @State private var presentAlert = false
     @State private var clientName: String = ""
