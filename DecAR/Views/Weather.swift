@@ -173,73 +173,60 @@ struct WeatherView: View {
                }
                Spacer()
                Group {
-                   VStack {
-                       Text("\(feelsLike) \(self.weatherInfo.feelsLike , specifier: "%.1f") ℃")
-                           .font(.title2)
-                           .padding()
+                   VStack(alignment: .leading, spacing: 2) {
+                           Text("\(feelsLike) \(self.weatherInfo.feelsLike , specifier: "%.1f") ℃")
+                               .font(.title2)
+                               .padding()
                                .overlay(
-                                   RoundedRectangle(cornerRadius: 16)
-                                       .stroke(.blue, lineWidth: 2)
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(.blue, lineWidth: 2)
                                )
                                .accessibilityLabel(feelsLike)
-                       Text("\(Humidity) \(self.weatherInfo.humidity, specifier: "%.1f") %")
-                           .font(.title2)
-                           .padding()
+                           Text("\(Humidity) \(self.weatherInfo.humidity, specifier: "%.1f") %")
+                               .font(.title2)
+                               .padding()
                                .overlay(
-                                   RoundedRectangle(cornerRadius: 16)
-                                       .stroke(.blue, lineWidth: 2)
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(.blue, lineWidth: 2)
                                )
                                .accessibilityLabel(Humidity)
-                       Text("\(windSpeed) \(self.weatherInfo.speed , specifier: "%.1f") m/s")
-                           .font(.title2)
-                           .padding()
+                           Text("\(windSpeed) \(self.weatherInfo.speed , specifier: "%.1f") m/s")
+                               .font(.title2)
+                               .padding()
                                .overlay(
-                                   RoundedRectangle(cornerRadius: 16)
-                                       .stroke(.blue, lineWidth: 2)
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(.blue, lineWidth: 2)
                                )
+                               
                                .accessibilityLabel(windSpeed)
-                       //  Text("Icon \(self.weatherInfo.icon)")
-                       Text("\(Description) \(self.weatherInfo.description)")
-                           .font(.title2)
-                           .padding()
-                               .overlay(
-                                   RoundedRectangle(cornerRadius: 16)
-                                       .stroke(.blue, lineWidth: 2)
-                               )
-                               .accessibilityLabel(Description)
-                       Text("\(Main) \(self.weatherInfo.main)")
-                           .font(.title2)
-                           .padding()
-                               .overlay(
-                                   RoundedRectangle(cornerRadius: 16)
-                                       .stroke(.blue, lineWidth: 4)
-                               )
-                               .accessibilityLabel(Main)
-                       Text(self.weatherInfo.message)
-                       //  Text("https://openweathermap.org/img/wn/\(self.weatherInfo.icon)@2x.png")
                    }
                }
                
            }
             Spacer()
            Text(joke)
-               .padding(2)
+               .padding(10)
                .font(.title3)
                .accessibilityLabel(joke)
-           Button {
+               .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(.blue, lineWidth: 1)
+               )
+           Button("\(weatherFetchJoke)") {
                Task {
                    let (data, _) = try await URLSession.shared.data(from: URL(string:"https://api.chucknorris.io/jokes/random")!)
                    let decodedResponse = try? JSONDecoder().decode(Joke.self, from: data)
                    joke = decodedResponse?.value ?? ""
                }
-           } label: {
-               Text(weatherFetchJoke)
+           }
                    .accessibilityLabel(weatherFetchJoke)
-        }
+                   .padding()
+                   .background(Color.gray.opacity(0.2))
+                   .clipShape(Capsule())
            Spacer()
     }
 }
-  
+
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
         WeatherView()
@@ -252,6 +239,28 @@ struct Joke: Codable {
 
 
 /*
+ 
+ //  Text("Icon \(self.weatherInfo.icon)")
+ Text("\(Description) \(self.weatherInfo.description)")
+     .font(.title2)
+     .padding()
+     .overlay(
+      RoundedRectangle(cornerRadius: 16)
+          .stroke(.blue, lineWidth: 2)
+     )
+     .accessibilityLabel(Description)
+ 
+ //  Text("https://openweathermap.org/img/wn/\(self.weatherInfo.icon)@2x.png")
+ 
+ Text("\(Main) \(self.weatherInfo.main)")
+     .font(.title2)
+     .padding()
+     .overlay(
+      RoundedRectangle(cornerRadius: 16)
+          .stroke(.blue, lineWidth: 4)
+     )
+     .accessibilityLabel(Main)
+ Text(self.weatherInfo.message)
  extension UIImageView {
      func loadFrom(URLAddress: String) {
          guard let url = URL(string: URLAddress) else {

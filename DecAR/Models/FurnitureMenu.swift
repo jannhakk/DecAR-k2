@@ -35,13 +35,11 @@ struct FurnitureCategoriesRow: View {
 
 //View shows furniture menu
 struct FurnitureMenu: View {
-    
-   // var category: Category
-    
+        
     @Environment(\.managedObjectContext) private var viewContext
     
-    let furnitureCategories = [Category(categoryName: "Chairs"), Category(categoryName: "Couches"), Category(categoryName: "Stools"), Category(categoryName: "Beds"), Category(categoryName: "Paintings"), Category(categoryName: "Lamps"),
-                                                                                                                                                                                Category(categoryName: "Desks"), Category(categoryName: "Flower"), Category(categoryName: "Sculptures"), Category(categoryName: "Stands"), Category(categoryName: "Shelves"), Category(categoryName: "Carpet"), Category(categoryName: "Vases"), Category(categoryName: "Tableset"), Category(categoryName: "Mirrors"), Category(categoryName: "Tables"), Category(categoryName: "Plants"), Category(categoryName: "Wardrobes"), Category(categoryName: "Sets"), Category(categoryName: "Televisions"), Category(categoryName: "Pianos")]
+    let furnitureCategories = [Category(categoryName: "Chairs"), Category(categoryName: "Couches"), Category(categoryName: "Stools"), Category(categoryName: "Beds"),
+                                                                                                                                                                                Category(categoryName: "Desks"), Category(categoryName: "Flower"),  Category(categoryName: "Stands"), Category(categoryName: "Shelves"), Category(categoryName: "Vases"),   Category(categoryName: "Tables"), Category(categoryName: "Plants"),  Category(categoryName: "Sets"),  Category(categoryName: "Pianos")]
 
     @Binding var isPresented: Bool
     
@@ -105,26 +103,9 @@ struct FurnitureMenu: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-       // .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(red: 242/255, green: 242/255, blue: 247/255))
-        //.listStyle(.automatic)
         .listStyle(.sidebar)
         .edgesIgnoringSafeArea(.all)
     }
 
 }
-
-/*
-List {
-    ForEach(furnitures) { furniture in
-        Button(furniture.furnitureName!, action: {
-            currentObject = SelectedFurniture( furniture.modelName!)
-            
-            let appFurniture = UserDefaults.standard
-            appFurniture.set(furniture.modelName, forKey: "AppCurrentObject")
-
-             isPresented = false
-        })
-    }
-        
-}*/
