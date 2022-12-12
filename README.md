@@ -1,5 +1,5 @@
 
-![DecAR Logo](https://i.imgur.com/tTV1oJo.png)
+![DecAR Logo](https://i.imgur.com/y1asCC7.png)
 # DecAR
 
 DecAR is an augmented reality interior design application aimed for individuals
