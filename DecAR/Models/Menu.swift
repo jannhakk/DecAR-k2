@@ -84,7 +84,7 @@ struct Menu: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(red: 73/255, green: 167/255, blue: 221/255).opacity(0.1))
+        .background(Color(red: 73/255, green: 167/255, blue: 221/255).opacity(0.6))
         .listStyle(.sidebar)
         .edgesIgnoringSafeArea(.all)
     }
