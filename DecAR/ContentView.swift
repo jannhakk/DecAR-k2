@@ -197,7 +197,7 @@ extension ARView: ARCoachingOverlayViewDelegate {
         self.addSubview(coachingOverlay)
     }
     
-    func makePeace() -> String {
+    func getSavedCurrentObject() -> String {
         let furDetail = UserDefaults.standard.object(forKey: "AppCurrentObject") as? String ?? String()
         return furDetail
     }
@@ -426,19 +426,23 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
         
-        //arView.currentModelName = arView.makePeace()
-
-        //arView.setupConfiguration()
+        if arView.getSavedCurrentObject().isEmpty {
+                    arView.currentModelName = "stool"
+                } else {
+                    arView.currentModelName = arView.getSavedCurrentObject()
+                }
         
-        //arView.addCoaching()
+        arView.setupConfiguration()
         
-        //arView.enableObjectAdd()
+        arView.addCoaching()
+        
+        arView.enableObjectAdd()
 
-        //arView.enableObjectRemoval()
+        arView.enableObjectRemoval()
       
-        //arView.enableWorldPersistance()
+        arView.enableWorldPersistance()
         
-        //arView.enableWorldLoad()
+        arView.enableWorldLoad()
         
         return arView
 
@@ -446,7 +450,12 @@ struct ARViewContainer: UIViewRepresentable {
      
     
     func updateUIView(_ uiView: ARView, context: Context) {
-        uiView.currentModelName = uiView.makePeace()
+        
+        if uiView.getSavedCurrentObject().isEmpty {
+                    uiView.currentModelName = "stool"
+                } else {
+                    uiView.currentModelName = uiView.getSavedCurrentObject()
+                }
     }
     
 }
