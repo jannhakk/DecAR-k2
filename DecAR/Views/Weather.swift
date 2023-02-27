@@ -32,7 +32,7 @@ enum NetwokrError: Error {
 //Handles openweather API call and JSON decoding
 class GetWeather {
     
-    @State private var apiKey = "10fa652305f6b2fc849c3ac9acdc7e50"
+    @State private var apiKey = "API KEY"
     
     func urlWeather(_ city: String) -> URL? {
         guard let url = URL(string:
